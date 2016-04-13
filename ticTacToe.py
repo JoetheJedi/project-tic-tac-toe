@@ -17,20 +17,22 @@ def checkWinner(board, player):
     print('Checking if ' + player + ' is a winner...')
     if (board['mid-L']==player) and (board['mid-M']==player) and (board['mid-R']==player):#ADDED MIDDLE ACROSS WINNING SCENARIO
         return True
-    if (board['top-L']==player) and (board['top-M']==player) and (board['top-R']==player):#ADDED TOP ACROSS WINNING SCENARIO
+    elif (board['top-L']==player) and (board['top-M']==player) and (board['top-R']==player):#ADDED TOP ACROSS WINNING SCENARIO
         return True
-    if (board['low-L']==player) and (board['low-M']==player) and (board['low-R']==player):#ADDED LOWER ACROSS WINNING SCENARIO
+    elif (board['low-L']==player) and (board['low-M']==player) and (board['low-R']==player):#ADDED LOWER ACROSS WINNING SCENARIO
         return True
-    if (board['top-L']==player) and (board['mid-L']==player) and (board['low-L']==player):#ADDED LEFT VERTICAL WINNING SCENARIO
+    elif (board['top-L']==player) and (board['mid-L']==player) and (board['low-L']==player):#ADDED LEFT VERTICAL WINNING SCENARIO
         return True
-    if (board['top-M']==player) and (board['mid-M']==player) and (board['low-M']==player):#ADDED MIDDLE VERTICAL WINNING SCENARIO
+    elif (board['top-M']==player) and (board['mid-M']==player) and (board['low-M']==player):#ADDED MIDDLE VERTICAL WINNING SCENARIO
         return True
-    if (board['top-R']==player) and (board['mid-R']==player) and (board['low-R']==player):#ADDED RIGHT VERTICAL WINNING SCENARIO
+    elif (board['top-R']==player) and (board['mid-R']==player) and (board['low-R']==player):#ADDED RIGHT VERTICAL WINNING SCENARIO
         return True
-    if (board['top-L']==player) and (board['mid-M']==player) and (board['low-R']==player):#ADDED DIAGONAL WINNING SCENARIO #1
+    elif (board['top-L']==player) and (board['mid-M']==player) and (board['low-R']==player):#ADDED DIAGONAL WINNING SCENARIO #1
         return True
-    if (board['top-R']==player) and (board['mid-M']==player) and (board['low-L']==player):#ADDED DIAGONAL WINNING SCENARIO #2
+    elif (board['top-R']==player) and (board['mid-M']==player) and (board['low-L']==player):#ADDED DIAGONAL WINNING SCENARIO #2
         return True
+    else:
+        return False
         
     
     # TO DO #################################################################
